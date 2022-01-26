@@ -1,10 +1,12 @@
 // Let's see module exports in this file
 
+const PI = 3.14;
 const calculatePerimeter = (a) => 4*a;
 const calculateArea = (a) => a*a;
 
 module.exports.perimeterCalculator = calculatePerimeter
 module.exports.areaCalculator = calculateArea
+module.exports.pi = PI
 
 
 // The above is the dot representation, he same can be achieved via square brace representation, here "module.exports" on left of "perimeterCalculator" represents that we are adding the "perimeterCalculator" to the "module.exports"
