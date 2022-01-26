@@ -19,5 +19,7 @@ module.exports["areaCalculator"] = calculateArea
 
 */
 
-console.log(module.exports.perimeterCalculator(10));
-console.log(module.exports.areaCalculator(10));
+if(require.main == module) { // it is like if __name__ == "__main__" in python
+    console.log(module.exports.perimeterCalculator(10));
+    console.log(module.exports.areaCalculator(10));
+}
