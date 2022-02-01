@@ -2,10 +2,10 @@
   "name": "fileoperations",
   "version": "1.0.0",
   "description": "",
-  "main": "writeIntoFile.js",
+  "main": "writeIntoFile.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "type": "module"
+    "start": "nodemon writeIntoFile.mjs"
   },
   "author": "Kiran Deep",
   "license": "ISC",
