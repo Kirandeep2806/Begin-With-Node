@@ -1,0 +1,15 @@
+{
+  "name": "fileoperations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "writeIntoFile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type": "module"
+  },
+  "author": "Kiran Deep",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
