@@ -1,8 +1,8 @@
 const kiran = (a, b) => {
-    console.log("Namastee!!!");
-    console.log(a + b);
+    let name=  "Closures!!!";
+    console.log(a + b, `${name}`);
     return function(a, b) {
-        console.log(a + b);
+        console.log(a + b, `${name}`);
     };
 }
 
