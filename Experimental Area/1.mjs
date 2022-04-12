@@ -11,9 +11,9 @@ const b = () => {
 }
 const c = () => "C";
 
-const printContent = () => {
+const printContent = async() => {
     console.log(a());
-    console.log(b());
+    console.log(await b());
     console.log(c());
 }
 
