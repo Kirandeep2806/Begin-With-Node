@@ -6,14 +6,14 @@
 const a = () => "A";
 const b = () => {
     return new Promise((resolve, reject) => {
-        setTimeout(() => resolve("B"), 1000);
+        setTimeout(() => reject("B"), 1000);
     });
 }
 const c = () => "C";
 
 const printContent = async() => {
     console.log(a());
-    console.log(await b());
+    console.log(await b().catch(err => console.log("Kiran")));
     console.log(c());
 }
 
