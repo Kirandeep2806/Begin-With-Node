@@ -13,7 +13,7 @@ const getAnime = async () => {
 }
 
 getAnime();
-
+// Normal execution of the function proceeds as usual, on promises runs on microtask queue.
 console.log("hi");
 console.log("hi");
 console.log("hi");
