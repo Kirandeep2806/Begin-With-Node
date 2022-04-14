@@ -15,10 +15,6 @@ const getAnime = async () => {
 console.log(getAnime().then(data => console.log(data)));
 // Normal execution of the function proceeds as usual, on promises runs on microtask queue.
 console.log("hi");
-console.log("hi");
-console.log("hi");
-console.log("hi");
-console.log("hi");
 
 // const a = () => "A";
 // const b = () => {
