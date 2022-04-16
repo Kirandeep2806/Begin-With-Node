@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    target = document.getElementsByTagName("body")[0];
+
+    const apiKey = "4250d84938679fd3ad537206c2acf03b";
+    const requestURL = `http://api.positionstack.com/v1/reverse?access_key=${apiKey}`;
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(async (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            const response = await fetch(`${requestURL}&query=${latitude},${longitude}&limit=5`);
+            const data = await response.json();
+            target.innerHTML = JSON.stringify(data);
+        });
+
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+
+
+</script>
+
+</html>
