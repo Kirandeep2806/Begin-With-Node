@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-const apiURL = "https://anime-facts-rest-api.herokuapp.com/api/v";
+const apiURL = "https://anime-facts-rest-api.herokuapp.com/api/v1";
 
 const getAnime = async () => {
     // await can be applied on the function which is returning Promises, and takes care that not statements are executed before the Promise is resolved
@@ -8,7 +8,7 @@ const getAnime = async () => {
         console.log(err);
         // process.exit(0);
     });
-    if(!response) return
+    if(response) {
     // const data = response.json();
     console.log(response.status);
     // Explore the above line to see what all are the properties of the response object
@@ -16,6 +16,7 @@ const getAnime = async () => {
     // console.log(data);
     return data;
     // In the above 2 await call both fetch and response.json are returning Promises, so we can use await on both of them.
+    }
 }
 
 console.log(getAnime().then(data => console.log(data)));
