@@ -4,7 +4,11 @@ const apiURL = "https://anime-facts-rest-api.herokuapp.com/api/v";
 
 const getAnime = async () => {
     // await can be applied on the function which is returning Promises, and takes care that not statements are executed before the Promise is resolved
-    const response = await fetch(`${apiURL}`);
+    const response = await fetch(`${apiURL}`).catch(err => {
+        console.log(err);
+        // process.exit(0);
+    });
+    if(!response) return
     // const data = response.json();
     console.log(response.status);
     // Explore the above line to see what all are the properties of the response object
